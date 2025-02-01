@@ -1,0 +1,9 @@
+{
+	"name": "Backend",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "backend",
+	"workspaceFolder": "/workspace/backend",
+	"postCreateCommand": "sudo chown vscode target"
+}

@@ -1,0 +1,12 @@
+{
+	"name": "Frontend",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "frontend",
+	"workspaceFolder": "/workspace/frontend",
+	"containerEnv": {
+		"NG_CLI_ANALYTICS": "false"
+	},
+	"postCreateCommand": "sudo chown node node_modules"
+}

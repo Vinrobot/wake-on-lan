@@ -1,0 +1,20 @@
+services:
+  frontend:
+    image: mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm
+    command: sleep infinity
+    volumes:
+      - ..:/workspace:cached
+      - frontend-node_modules:/workspace/frontend/node_modules
+
+  backend:
+    image: mcr.microsoft.com/devcontainers/rust:1-1-bookworm
+    command: sleep infinity
+    volumes:
+      - ..:/workspace:cached
+      - backend-target:/workspace/backend/target
+      - backend-cargo:/usr/local/cargo
+
+volumes:
+  frontend-node_modules:
+  backend-target:
+  backend-cargo:
